@@ -74,9 +74,7 @@ a {
     height: 56px;
     background-color: black;
     font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
+    padding: 10px;
 }
 
 ul {
@@ -86,12 +84,29 @@ ul {
     display: flex;
 }
 
+.header-dropdown-2>ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-dropdown-2 li {
+    font-weight: bold;
+}
+
+.header-dropdown-2 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
 .header-nav .header-dropdown>ul>li:first-child {
-    padding: 0 30px 0 0;
+    padding: 0 15px 0 0;
 }
 
 .header-nav .header-dropdown>ul>li {
-    padding: 0 30px;
+    padding: 0 15px;
     margin: 0;
 }
 
@@ -115,6 +130,7 @@ ul {
 
 .carousel-xxx .title img {
     padding-left: 20px;
+    width: 100px;
 }
 
 .carousel-1 .item {
@@ -315,6 +331,16 @@ ul {
     background-color: #FDF5F3;
     padding: 0 90px 90px 90px;
     max-width: 100%;
+}
+
+.header-nav {
+    display: block;
+}
+
+.carousel-2 .title img {
+    background-color: #FDF5F3;
+    padding: 0 90px 90px 90px;
+    max-width: 100px;
 
 }
 
@@ -335,6 +361,7 @@ ul {
 /* ---------------------------------------------------------- */
 .carousel-4 {
     padding-bottom: 70px;
+    margin: 0 auto;
 }
 
 .carousel-4 .item {
@@ -373,6 +400,7 @@ ul {
 
 .carousel-2 .title img {
     padding-right: 8px;
+    max-width: 100px;
 }
 
 
@@ -388,12 +416,13 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(250, 90, 10, 0.67);
 }
 
 .place-box .place-left {
-    background-color: rgba(250, 90, 10, 0.67);
     padding-left: 60px;
     display: flex;
+    padding-bottom: 50px;
     flex-direction: column;
     align-items: flex-start;
 }
@@ -435,7 +464,7 @@ ul {
 
 .place-box-2 .place-left,
 .place-box-2 .place-right {
-    padding: 70px 0;
+    padding: 70px 50px;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -443,14 +472,12 @@ ul {
 }
 
 .place-box-2 .place-left {
-    padding-left: 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
 .place-box-2 .place-right {
-    padding-left: 60px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -602,6 +629,14 @@ footer ul a {
         font-size: 56px;
     }
 
+    .header-nav {
+        display: none;
+    }
+
+    .title-3 {
+        font-size: 46px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -610,19 +645,19 @@ footer ul a {
         padding-bottom: 40px;
     }
 
-    .title {
+    .title,
+    .place-box-2 .place-right .title,
+    .place-box .place-left .title {
         font-size: 46px;
     }
-}
 
-@media (max-width: 480px) {
-    .sup-title {
-        font-size: 12px;
-        padding-bottom: 30px;
+    .header-nav {
+        display: none;
     }
 
-    .title {
-        font-size: 36px;
+    .place-box-2 .place-right,
+    .place-box-2 .place-left {
+        padding: 30px;
     }
 
     .place-box {
@@ -632,5 +667,96 @@ footer ul a {
     .place-box .place-left,
     .place-box .place-right {
         width: 100%;
+    }
+
+    .place-box-2 {
+        display: block;
+    }
+
+    .place-box-2 .place-left,
+    .place-box-2 .place-right {
+        width: 100%;
+    }
+
+    .carousel-2,
+    .carousel-2 .title img {
+        padding: 0;
+    }
+
+    .group-info .text-log {
+        display: none;
+    }
+
+    .title-3 {
+        font-size: 36px;
+    }
+
+    .place-box-2 .place-right .title {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sup-title {
+        font-size: 12px;
+        padding-bottom: 30px;
+    }
+
+    .header-top .logo img {
+        height: 40px;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .group-info {
+        display: none;
+    }
+
+
+    .place-box .place-left .title,
+    .title {
+        font-size: 36px;
+    }
+
+    .place-box-2 .place-right,
+    .place-box-2 .place-left {
+        padding: 15px;
+    }
+
+    .place-box {
+        display: block;
+    }
+
+    .place-box .place-left,
+    .place-box .place-right {
+        width: 100%;
+    }
+
+    .title-3 {
+        font-size: 26px;
+    }
+
+    .carousel-2,
+    .carousel-2 .title img {
+        padding: 0;
+    }
+
+    .place-box-2 {
+        display: block;
+    }
+
+    .place-box-2 .place-left,
+    .place-box-2 .place-right {
+        width: 100%;
+    }
+
+    .carousel-1 .btn-discover-more {
+        height: 2vh;
+    }
+
+    .place-box-2 .place-right .title {
+        font-size: 26px;
     }
 }
